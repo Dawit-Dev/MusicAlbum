@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import Card from "../cards/Card";
 import CardSection from "../cards/CardSection";
+import Button from "./Button";
 
 const AlbumDetail = ({ album }) => {
   const {
@@ -28,6 +29,9 @@ const AlbumDetail = ({ album }) => {
       <CardSection>
         <Image style={coverImageStyle} source={{ uri: album.cover_medium }} />
       </CardSection>
+      <CardSection>
+        <Button />
+      </CardSection>
     </Card>
   );
 };
@@ -38,7 +42,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
   },
   headerTextStyle: {
-    fontSize: 18
+    fontSize: 18,
   },
   imageStyle: {
     height: 50,
@@ -53,8 +57,8 @@ const styles = StyleSheet.create({
   coverImageStyle: {
     height: 300,
     flex: 1,
-    width: null
-  }
+    width: null,
+  },
 });
 
 export default AlbumDetail;
