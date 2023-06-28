@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, ScrollView } from "react-native";
 import AlbumDetail from "./AlbumDetail";
 
 const AlbumList = () => {
@@ -15,7 +15,7 @@ const AlbumList = () => {
     return albums.map((album) => <AlbumDetail key={album.id} album={album} />);
   };
 
-  return <View>{renderAlbums()}</View>;
+  return <ScrollView>{renderAlbums()}</ScrollView>;
 };
 
 const styles = StyleSheet.create({});
